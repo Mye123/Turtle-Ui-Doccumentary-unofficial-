@@ -1,0 +1,56 @@
+1. Getting the loadstring
+ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
+
+2. Adding A window.
+local lol = library:Window("name") -- window name,the local name can be changed to your liking to use it in the script
+
+3. Adding buttons 
+lol:Button("Button name", function() -- name
+   print("pressed button") -- thing that happens
+end)
+
+4. Toggles.
+
+lol:Toggle("Example toggle", true, function(bool) -- name
+    print(bool)  -- code (bool is true or false)
+end)
+
+5. Color Pickers
+
+lol:ColorPicker("Color Picker", Color3.fromRGB(255, 255, 255), function(color) -- name 
+   print(color) -- whatever u wanna do with color
+end)
+
+6. Sliders
+
+lol:Slider("Example Slider",0,100,20, function(value) -- name, the first value is minimum and 2nd one is max and 3rd is default
+   print(value) -- code (value is the value)
+end)
+
+7. Labels
+
+lol:Label("hi", Color3.fromRGB(127, 143, 166)) -- Text and Color
+
+8. Box/Textbox
+
+
+lol:Box("Walkspeed", function(text, focuslost) -- Name and dont touch focuslost
+   if focuslost then
+   print(text) -- text is the output text
+   end
+end)
+
+9. Dropdowns
+
+local dropdown = lol:Dropdown("Example dropdown", {"Button 1", "Button 2", "Third button"}, function(name) -- name , and dropdown contents
+   print(name) -- name is the picked item
+end)
+
+10. Other dropdown things
+
+dropdown:Button("New button")
+
+dropdown:Remove("Button")
+
+
+-- Doccumentary by Mye and UI by Intrer#0421 i think
